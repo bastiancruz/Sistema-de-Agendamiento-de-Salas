@@ -1,0 +1,264 @@
+:host {
+  --c-white: #ffffff;
+  --c-bg: #fcfbf9;
+  --c-cinnamon: #9e5b38;       /* Café canela principal */
+  --c-cinnamon-hover: #864c2d; /* Canela oscuro para hover */
+  --c-cinnamon-light: #f5ede6; /* Canela suave para badges y fondos */
+  --c-text-main: #2b2523;      /* Texto oscuro cálido */
+  --c-text-muted: #6e6763;     /* Texto secundario */
+  --c-border: #ede8e3;        /* Bordes sutiles */
+  
+  display: block;
+  min-height: 100vh;
+  background-color: var(--c-bg);
+  color: var(--c-text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 3rem;
+  background: var(--c-white);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--c-cinnamon);
+}
+
+.brand-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: var(--c-text-main);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--c-text-muted);
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  color: var(--c-cinnamon);
+  background-color: var(--c-cinnamon-light);
+}
+
+/* Contenido Principal */
+.content-wrapper {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  width: 100%;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+
+.badge-tag {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background-color: var(--c-cinnamon-light);
+  color: var(--c-cinnamon);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--c-text-main);
+  margin-bottom: 1.25rem;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--c-text-muted);
+  max-width: 580px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+/* Botones de Acción */
+.actions-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--c-cinnamon);
+  color: var(--c-white);
+  border: 1px solid var(--c-cinnamon);
+  box-shadow: 0 2px 4px rgba(158, 91, 56, 0.15);
+}
+
+.btn-primary:hover {
+  background-color: var(--c-cinnamon-hover);
+  border-color: var(--c-cinnamon-hover);
+}
+
+.btn-secondary {
+  background-color: var(--c-white);
+  color: var(--c-text-main);
+  border: 1px solid var(--c-border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--c-cinnamon-light);
+  border-color: var(--c-cinnamon);
+  color: var(--c-cinnamon);
+}
+
+/* Paneles / Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card-item {
+  background: var(--c-white);
+  border: 1px solid var(--c-border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  border-color: var(--c-cinnamon);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.card-status {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-available { background-color: #27ae60; }
+.status-sync { background-color: var(--c-cinnamon); }
+.status-audit { background-color: #7f8c8d; }
+
+.card-label {
+  font-size: 0.8rem;
+  color: var(--c-text-muted);
+  font-weight: 500;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--c-text-main);
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: var(--c-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/* Zona de Registro e Inicio de Sesión */
+.auth-cta {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.btn-register {
+  background-color: var(--c-cinnamon-light);
+  color: var(--c-cinnamon);
+  border: 1px solid rgba(158, 91, 56, 0.25);
+  font-weight: 600;
+  padding: 0.65rem 1.6rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  transition: all 0.2s ease;
+}
+
+.btn-register:hover {
+  background-color: var(--c-cinnamon);
+  color: var(--c-white);
+  border-color: var(--c-cinnamon);
+  box-shadow: 0 4px 12px rgba(158, 91, 56, 0.2);
+}
+
+.login-prompt {
+  font-size: 0.88rem;
+  color: var(--c-text-muted);
+  margin: 0;
+}
+
+.login-link {
+  color: var(--c-cinnamon);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.login-link:hover {
+  color: var(--c-cinnamon-hover);
+  border-bottom-color: var(--c-cinnamon-hover);
+}

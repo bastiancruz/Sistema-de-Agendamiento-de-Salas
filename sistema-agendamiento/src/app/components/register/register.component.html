@@ -1,0 +1,86 @@
+<div class="auth-container">
+  <!-- Cabecera mínima para regresar -->
+  <header class="auth-topbar">
+    <a routerLink="/" class="brand-link">
+      <span class="brand-dot"></span>
+      <span class="brand-title">ReservaSalas</span>
+    </a>
+  </header>
+
+  <!-- Tarjeta Central de Registro -->
+  <main class="auth-main">
+    <div class="auth-card">
+      <div class="card-header-text">
+        <span class="badge-tag">Nuevo Usuario</span>
+        <h1 class="card-title">Crea tu cuenta</h1>
+        <p class="card-subtitle">Ingresa tus datos para comenzar a agendar salas y espacios de estudio.</p>
+      </div>
+
+      <form class="auth-form" (submit)="$event.preventDefault()">
+        <!-- Nombre Completo -->
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input 
+            type="text" 
+            id="nombre" 
+            placeholder="Ej. Juan Pérez" 
+            class="input-field" 
+            autocomplete="name" 
+            required 
+          />
+        </div>
+
+        <!-- RUT -->
+        <div class="form-group">
+          <label for="rut">RUT</label>
+          <input 
+            type="text" 
+            id="rut" 
+            placeholder="12.345.678-9" 
+            class="input-field" 
+            required 
+          />
+        </div>
+
+        <!-- Correo Electrónico -->
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input 
+            type="email" 
+            id="email" 
+            placeholder="usuario@ejemplo.cl" 
+            class="input-field" 
+            autocomplete="email" 
+            required 
+          />
+        </div>
+
+        <!-- Contraseña -->
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input 
+            type="password" 
+            id="password" 
+            placeholder="Crea una contraseña segura" 
+            class="input-field" 
+            autocomplete="new-password" 
+            required 
+          />
+        </div>
+
+        <!-- Botón de acción principal -->
+        <button type="submit" class="btn btn-submit">
+          Registrarme
+        </button>
+      </form>
+
+      <!-- Pie con enlace a Login -->
+      <footer class="card-footer">
+        <p class="footer-text">
+          ¿Ya tienes una cuenta registrada? 
+          <a routerLink="/login" class="link-cinnamon">Inicia sesión</a>
+        </p>
+      </footer>
+    </div>
+  </main>
+</div>

@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ListaSalasComponent } from './components/lista-salas/lista-salas.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ListaSalasComponent
+    ListaSalasComponent,
+    InicioComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,75 @@
+<div class="main-container">
+  <!-- Barra superior minimalista -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      <span class="brand-title">ReservaSalas</span>
+    </div>
+    <nav class="nav-links">
+      <button class="nav-btn active">Inicio</button>
+      <button class="nav-btn">Salas</button>
+      <button class="nav-btn">Mis Reservas</button>
+    </nav>
+  </header>
+
+  <!-- Contenido Central -->
+  <main class="content-wrapper">
+    <section class="hero-section">
+      <span class="badge-tag">Plataforma de Gestión</span>
+      <h1 class="hero-title">Espacios pensados para colaborar y crear.</h1>
+      <p class="hero-subtitle">
+        Gestiona y reserva salas de estudio, reuniones y laboratorios con disponibilidad en tiempo real.
+      </p>
+
+      <div class="actions-row">
+        <button class="btn btn-primary">
+          Explorar Salas
+        </button>
+        <button class="btn btn-secondary">
+          Consultar Horarios
+        </button>
+      </div>
+
+      <!-- Zona de Autenticación Rápida -->
+      <div class="auth-cta">
+        <button class="btn btn-register" routerLink="/registro">
+          Crear cuenta nueva
+        </button>
+        <p class="login-prompt">
+          ¿Ya tienes una cuenta registrada? 
+          <a class="login-link" href="javascript:void(0)" routerLink="/login" >Inicia sesión aquí</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Métricas / Acciones Rápidas estilo panel Robin -->
+    <section class="cards-grid">
+      <div class="card-item">
+        <div class="card-header">
+          <span class="card-status status-available"></span>
+          <span class="card-label">Disponibilidad Inmediata</span>
+        </div>
+        <h3 class="card-title">Salas Libres</h3>
+        <p class="card-desc">Consulta los espacios que puedes utilizar en este momento sin reserva previa.</p>
+      </div>
+
+      <div class="card-item">
+        <div class="card-header">
+          <span class="card-status status-sync"></span>
+          <span class="card-label">Planificación</span>
+        </div>
+        <h3 class="card-title">Agendar Reserva</h3>
+        <p class="card-desc">Programa sesiones para tu equipo seleccionando fecha, duración y capacidad requerida.</p>
+      </div>
+
+      <div class="card-item">
+        <div class="card-header">
+          <span class="card-status status-audit"></span>
+          <span class="card-label">Historial</span>
+        </div>
+        <h3 class="card-title">Mis Solicitudes</h3>
+        <p class="card-desc">Revisa el estado de confirmación, códigos de acceso y cancelaciones pendientes.</p>
+      </div>
+    </section>
+  </main>
+</div>
